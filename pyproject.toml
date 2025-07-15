@@ -1,0 +1,11 @@
+[project]
+name = "nullfs-pyfuse3"
+version = "0.1.0"
+description = "write-only file system using pyfuse3"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyfuse3>=3.4.0",
+    "pytest>=8.4.1",
+    "typing-extensions>=4.14.1",
+]
