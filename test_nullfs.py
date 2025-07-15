@@ -132,8 +132,8 @@ def fs_run_dir(tmp_path_factory: pytest.TempPathFactory):
     yield mount_dir
 
     proc.terminate()
-    # if mount_dir.is_mount():
-    #     subprocess.run(["umount", str(mount_dir)], check=True)
+    if mount_dir.is_mount():
+        subprocess.run(["umount", str(mount_dir)], check=True)
 
 
 def test_fs_run_mount_dir(fs_run_dir: Path):
